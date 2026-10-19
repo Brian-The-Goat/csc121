@@ -5,7 +5,7 @@ from PIL import Image
 
 
 def main(): 
-    with open("src/module_6/analysis.csv", "r") as views, open("analysis.csv", "w") as analysis:
+    with open("src/module_6/analysis.csv", "r", encoding="utf-8") as views, open("analysis.csv", "w") as analysis:
         reader = csv.DictReader(views)
         writer = csv.DictWriter(analysis, fieldnames=reader.fieldnames + ["brightness"])
         writer.writeheader()
